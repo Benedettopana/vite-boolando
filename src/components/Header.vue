@@ -1,6 +1,5 @@
 <script>
 // Supports weights 100-700
-import "@fontsource-variable/material-symbols-rounded";
 
 export default {
   data() {

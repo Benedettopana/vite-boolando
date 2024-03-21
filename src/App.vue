@@ -3,6 +3,7 @@
 import Header from "./components/Header.vue";
 import Main from "./components/Main.vue";
 import Footer from "./components/Footer.vue";
+// import "@fontsource-variable/material-symbols-rounded";
 // FontAwesome
 // import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 // import { byPrefixAndName } from '@awesome.me/kit-KIT_CODE/icons'
