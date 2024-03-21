@@ -21,15 +21,15 @@ export default {
       ],
       menuIcon: [
         {
-          icon: "person",
+          icon: '<i class="fa-regular fa-user"></i>',
           link: "#",
         },
         {
-          icon: "favorite",
+          icon: '<i class="fa-regular fa-heart"></i>',
           link: "#",
         },
         {
-          icon: "shopping_cart",
+          icon: '<i class="fa-solid fa-bag-shopping"></i>',
           link: "#",
         },
       ],
@@ -62,7 +62,7 @@ export default {
         <nav class="menu social">
           <ul>
             <li v-for="(item, index) in menuIcon" :key="index">
-              <a :href="item.link">{{ item.icon }}</a>
+              <a :href="item.link" v-html="item.icon"></a>
             </li>
           </ul>
         </nav>
@@ -93,18 +93,5 @@ export default {
   .social {
     font-family: "Material Symbols Rounded Variable";
   }
-  // .menu ul {
-  //   display: flex;
-  //   list-style: none;
-  //   justify-content: space-between;
-  //   a {
-  //     color: $color-menu-a;
-  //     text-decoration: none;
-  //     margin-right: 10px;
-  //     &:hover {
-  //       text-decoration: underline;
-  //     }
-  //   }
-  // }
 }
 </style>

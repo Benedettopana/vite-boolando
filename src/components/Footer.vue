@@ -18,23 +18,23 @@ export default {
       ],
       menuIcon: [
         {
-          title: "Twitter",
+          title: '<i class="fa-brands fa-square-twitter"></i>',
           link: "#",
         },
         {
-          title: "Facebook",
+          title: '<i class="fa-brands fa-square-facebook"></i>',
           link: "#",
         },
         {
-          title: "Instagram",
+          title: '<i class="fa-brands fa-square-instagram"></i>',
           link: "#",
         },
         {
-          title: "Pinterest",
+          title: '<i class="fa-brands fa-square-pinterest"></i>',
           link: "#",
         },
         {
-          title: "YT",
+          title: '<i class="fa-brands fa-square-youtube"></i>',
           link: "#",
         },
       ],
@@ -67,7 +67,7 @@ export default {
             <ul>
               <li v-for="(item, index) in menuIcon" :key="index">
                 <!-- <a href="#"><i class="fa-brands fa-square-twitter"></i></a> -->
-                <a :href="item.link">{{ item.title }}</a>
+                <a :href="item.link" v-html="item.title"></a>
               </li>
               <!-- <li>
                 <a href="#">Facebook</a>
