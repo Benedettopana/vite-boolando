@@ -7,12 +7,15 @@
   box-sizing: border-box;
 }
 
+//? UTILITY
+
 img {
   max-width: 100%;
 }
 body {
   font-family: $primary-font;
 }
+//? /UTILITY
 
 .container {
   display: flex;
@@ -32,3 +35,19 @@ body {
   height: 100%;
   margin: 0 17%;
 }
+
+//? Header-Footer menu
+.menu ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  a {
+    color: $color-menu-a;
+    text-decoration: none;
+    margin-right: 10px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+//? /Footer

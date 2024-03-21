@@ -57,7 +57,6 @@ export default {
 
 <style lang="scss" scoped>
 @use "../assets/scss/partials/variables" as *;
-// @use "../assets/scss/partials/";
 
 .topbar {
   background-color: $bg-color-top-bar;
@@ -77,18 +76,18 @@ export default {
   .social {
     font-family: "Material Symbols Rounded Variable";
   }
-  .menu ul {
-    display: flex;
-    list-style: none;
-    justify-content: space-between;
-    a {
-      color: $color-menu-a;
-      text-decoration: none;
-      margin-right: 10px;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
+  // .menu ul {
+  //   display: flex;
+  //   list-style: none;
+  //   justify-content: space-between;
+  //   a {
+  //     color: $color-menu-a;
+  //     text-decoration: none;
+  //     margin-right: 10px;
+  //     &:hover {
+  //       text-decoration: underline;
+  //     }
+  //   }
+  // }
 }
 </style>
