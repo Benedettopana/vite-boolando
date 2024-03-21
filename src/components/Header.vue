@@ -63,32 +63,28 @@ export default {
   z-index: 1;
   top: 0;
   left: 0;
-}
+  .logo {
+    width: 300px;
+    img {
+      max-width: 30%;
+    }
+  }
 
-.logo {
-  width: 300px;
-}
-
-.logo img {
-  max-width: 30%;
-}
-
-.social {
-  font-family: "Material Symbols Rounded Variable";
-}
-.menu ul {
-  display: flex;
-  list-style: none;
-  justify-content: space-between;
-}
-
-.menu ul a {
-  color: white;
-  text-decoration: none;
-  margin-right: 10px;
-}
-
-.menu ul a:hover {
-  text-decoration: underline;
+  .social {
+    font-family: "Material Symbols Rounded Variable";
+  }
+  .menu ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    a {
+      color: white;
+      text-decoration: none;
+      margin-right: 10px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }
 </style>
