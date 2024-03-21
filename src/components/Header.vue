@@ -4,7 +4,36 @@ import "@fontsource-variable/material-symbols-rounded";
 
 export default {
   data() {
-    return {};
+    return {
+      menuSection: [
+        {
+          title: "Donna",
+          link: "#",
+        },
+        {
+          title: "Uomo",
+          link: "#",
+        },
+        {
+          title: "Bambini",
+          link: "#",
+        },
+      ],
+      menuIcon: [
+        {
+          icon: "person",
+          link: "#",
+        },
+        {
+          icon: "favorite",
+          link: "#",
+        },
+        {
+          icon: "shopping_cart",
+          link: "#",
+        },
+      ],
+    };
   },
 };
 </script>
@@ -16,14 +45,8 @@ export default {
         <!-- nav -->
         <nav class="menu">
           <ul>
-            <li>
-              <a href="#">Donna</a>
-            </li>
-            <li>
-              <a href="#">Uomo</a>
-            </li>
-            <li>
-              <a href="#">Bambini</a>
+            <li v-for="(item, index) in menuSection" :key="index">
+              <a :href="item.link">{{ item.title }}</a>
             </li>
           </ul>
         </nav>
@@ -38,14 +61,8 @@ export default {
         <!-- icon -->
         <nav class="menu social">
           <ul>
-            <li>
-              <a href="#">person</a>
-            </li>
-            <li>
-              <a href="#">favorite</a>
-            </li>
-            <li>
-              <a href="#">shopping_cart</a>
+            <li v-for="(item, index) in menuIcon" :key="index">
+              <a :href="item.link">{{ item.icon }}</a>
             </li>
           </ul>
         </nav>
