@@ -1,6 +1,7 @@
 <script>
 // Supports weights 100-700
 import "@fontsource-variable/material-symbols-rounded";
+
 export default {
   data() {
     return {};
@@ -54,9 +55,12 @@ export default {
   </header>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
+@use "../assets/scss/partials/variables" as *;
+// @use "../assets/scss/partials/";
+
 .topbar {
-  background-color: #ff6900;
+  background-color: $bg-color-top-bar;
   width: 100%;
   height: 60px;
   position: fixed;
@@ -78,7 +82,7 @@ export default {
     list-style: none;
     justify-content: space-between;
     a {
-      color: white;
+      color: $color-menu-a;
       text-decoration: none;
       margin-right: 10px;
       &:hover {
