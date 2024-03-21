@@ -7,7 +7,7 @@ export default {
 </script>
 
 <template>
-  <div>Main</div>
+  <div>Boolando Card</div>
 </template>
 
 <style lang="scss" scoped></style>

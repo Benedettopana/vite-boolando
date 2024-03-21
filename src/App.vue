@@ -3,6 +3,9 @@
 import Header from "./components/Header.vue";
 import Main from "./components/Main.vue";
 import Footer from "./components/Footer.vue";
+// FontAwesome
+// import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+// import { byPrefixAndName } from '@awesome.me/kit-KIT_CODE/icons'
 
 export default {
   components: {
@@ -22,5 +25,5 @@ export default {
 </template>
 
 <style lang="scss">
-@use "./assets/scss/main.scss";
+@import "./assets/scss/main.scss";
 </style>
