@@ -37,14 +37,8 @@ export default {
       <Product
         v-for="item in dbProducts.products"
         :key="item.id"
-        :imgHide="getImagePath(item.backImage)"
-        :img="getImagePath(item.frontImage)"
-        :brand="item.brand"
-        :nameProduct="item.name"
-        :price="item.price"
+        :product="item"
       />
-      <!-- :title="item.name" -->
-      <!-- :subPriceSale="item.prezzo" -->
     </div>
   </div>
 </template>
