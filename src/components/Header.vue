@@ -1,6 +1,4 @@
 <script>
-// Supports weights 100-700
-
 export default {
   data() {
     return {
