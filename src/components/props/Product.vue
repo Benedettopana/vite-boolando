@@ -88,7 +88,11 @@ export default {
 
     <!-- cuore -->
     <div class="cuore">
-      <span>&hearts;</span>
+      <span
+        :class="{ prefer: product.isInFavorites }"
+        @click="product.isInFavorites = !product.isInFavorites"
+        >&hearts;</span
+      >
     </div>
     <!-- BADGE -->
     <div class="badge">
@@ -124,6 +128,10 @@ export default {
 .line {
   text-decoration: line-through;
 }
+
+.prefer {
+  color: red;
+}
 .prodotto {
   width: 410px;
   margin: 8px;
@@ -149,9 +157,9 @@ export default {
     background-color: white;
     color: black;
 
-    &:hover {
-      color: red;
-    }
+    // &:hover {
+    //   color: red;
+    // }
   }
   .badge {
     position: absolute;
