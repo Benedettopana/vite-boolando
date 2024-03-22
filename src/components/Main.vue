@@ -1,39 +1,54 @@
 <script>
 // mi import il db e le cards
-import dbProducs from "../assets/data/db.json";
+import dbProducts from "../assets/data/db.json";
 import Product from "./props/Product.vue";
 
 export default {
   components: { Product },
   data() {
     return {
-      dbProducs,
-      products: [
-        {
-          image: "`../assets/img/${dbProducts.frontImage}`",
-          marca: "Levi's",
-          nome: "RELAXED FIT TEE UNISEX",
-          prezzo: "14,99",
-          prezzoOriginale: "29,99",
-        },
-      ],
+      dbProducts,
+      // products: [
+      //   {
+      //     image: "`../assets/img/${dbProducts.frontImage}`",
+      //     marca: "Levi's",
+      //     nome: "RELAXED FIT TEE UNISEX",
+      //     prezzo: "14,99",
+      //     prezzoOriginale: "29,99",
+      //   },
+      // ],
     };
+  },
+  methods: {
+    getImagePath(img) {
+      return new URL(`../assets/img/${img}`, import.meta.url).href;
+    },
+  },
+  mounted() {
+    console.log("prodotti ", this.dbProducts.products);
   },
 };
 </script>
 
 <template>
   <div>
-    Boolando Card
-    <Product
-      v-for="(item, index) in products"
-      :key="`n-${index}`"
-      :img="item.image"
-      :subtitle="item.marca"
-      :title="item.nome"
-      :subPriceSale="item.prezzo"
-    />
+    <h1>Prodotti</h1>
+    <div class="container">
+      <Product
+        v-for="item in dbProducts.products"
+        :key="item.id"
+        :imgHide="getImagePath(item.backImage)"
+        :img="getImagePath(item.frontImage)"
+        :brand="item.brand"
+        :nameProduct="item.name"
+        :price="item.price"
+      />
+      <!-- :title="item.name" -->
+      <!-- :subPriceSale="item.prezzo" -->
+    </div>
   </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+// @use "../assets/scss/partials/variables" as *;
+</style>

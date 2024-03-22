@@ -98,10 +98,6 @@ export default {
 @use "../assets/scss/partials/variables" as *;
 
 .bottom-bar {
-  // DEBUG
-  position: absolute;
-  top: calc(100% - 90px);
-  // /DEBUG
   width: 100%;
   background-color: $bg-color-bottom-bar;
   color: $color-menu-a;
