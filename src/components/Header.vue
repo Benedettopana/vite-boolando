@@ -81,14 +81,10 @@ export default {
   top: 0;
   left: 0;
   .logo {
-    width: 300px;
-    img {
-      max-width: 30%;
+    & img {
+      width: 120px;
+      min-width: 120px;
     }
-  }
-
-  .social {
-    font-family: "Material Symbols Rounded Variable";
   }
 }
 </style>
