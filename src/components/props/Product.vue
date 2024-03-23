@@ -121,8 +121,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-// @use "../assets/scss/partials/variables" as *;
-
+@use "../../assets/scss/main.scss";
+@use "../../assets/scss/partials/variables.scss" as *;
 /* hover */
 // line-through
 .line {
@@ -130,7 +130,7 @@ export default {
 }
 
 .prefer {
-  color: red;
+  color: $color-heart-clicked;
 }
 .prodotto {
   width: 410px;
@@ -154,12 +154,8 @@ export default {
     padding: 5px 15px;
 
     font-size: 2rem;
-    background-color: white;
-    color: black;
-
-    // &:hover {
-    //   color: red;
-    // }
+    background-color: $bg-product-heart;
+    color: $color-heart;
   }
   .badge {
     position: absolute;
@@ -168,14 +164,13 @@ export default {
     display: flex;
   }
   & .sconto {
-    background-color: red;
-    color: white;
+    background-color: $color-price;
+    color: $color-sale;
     font-size: 0.8rem;
     padding: 5px 10px;
     margin-right: 6px;
     &.sosteni {
-      background-color: green;
-      // left: 50px;
+      background-color: $bg-sale-sostieni;
     }
     &.sosteni.singolo {
       left: 0;
@@ -187,11 +182,10 @@ export default {
   font-size: 0.8rem;
   padding-bottom: 0;
   &.prezzo {
-    color: red;
+    color: $color-price;
     margin-right: 5px;
     &.originale {
-      color: black;
-      // text-decoration: line-through;
+      color: $color-price-original;
     }
     &::after {
       content: " \20AC";
